@@ -1,0 +1,16 @@
+{
+  "name": "travel-agency",
+  "version": "1.0.0",
+  "description": "Travel agency project with NodeJS, Express & Pug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "Express",
+    "Pug"
+  ],
+  "author": "Jose Castillo",
+  "license": "ISC"
+}
