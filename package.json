@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Travel agency project with NodeJS, Express & Pug",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "NodeJS",
@@ -12,5 +13,11 @@
     "Pug"
   ],
   "author": "Jose Castillo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
 }
