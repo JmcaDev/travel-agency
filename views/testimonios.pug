@@ -2,5 +2,31 @@ extends ./layout/index
 
 block contenido
   main(class="container mt-5")
+    h1(class="text-center mt-5") #{pagina}
+    
+    blockquote(class="text-center") Lee sobre nuestros clientes y sus experiencias
+    include ./layout/bloque-testimonios
+
     div(class="row")
-      h1 #{pagina}
+
+      div(class="col-md-12")
+        h2(class="d-block w-100 text-center") Agrega un testimonio
+
+        if(errores)
+          each error in errores
+            div(class="alert col alert-danger text-center") #{error.mensaje}
+
+      div(class="row justify-content-center col")
+        div(class="col-md-8")
+          form(action="/testimonios" method="POST")
+            div(class="form-group")
+              label(for="nombre") Nombre
+              input(id="nombre", type="text", placeholder="Tu nombre", name="nombre", class="form-control", value=nombre)
+            div(class="form-group")
+              label(for="correo") Correo Electrónico
+              input(id="correo", type="text", placeholder="Tu Correo", name="correo", class="form-control", value=correo)
+            div(class="form-group")
+              label(for="mensaje") Mensaje
+              textarea(id="mensaje", class="form-control", name="mensaje", placeholder="Tu Mensaje", rows=3) #{mensaje}
+
+            input(class="btn btn-success btn-block", type="submit")

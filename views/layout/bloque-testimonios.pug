@@ -1,0 +1,10 @@
+div(class="row testimoniales")
+  each testimonio in testimonios
+    div(class="col-md-6 col-lg-4 mb-4")
+      div(class="card")
+        div(class="card-body")
+          blockquote(class="blockquote")
+          p(class="mb-0")
+            | #{testimonio.mensaje}
+          footer(class="blockquote-footer")
+            | #{testimonio.nombre}

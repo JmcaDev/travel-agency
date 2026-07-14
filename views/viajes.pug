@@ -1,6 +1,7 @@
 extends ./layout/index
 
 block contenido
+
+  h1(class="mt-5 text-center") #{pagina}
   main(class="container mt-5")
-    div(class="row")
-      h1 #{pagina}
+    include ./layout/bloque-viajes
